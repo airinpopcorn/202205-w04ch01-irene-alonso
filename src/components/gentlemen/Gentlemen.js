@@ -1,3 +1,5 @@
+import { Icons } from "../icono/Icons";
+
 export function Gentlemen({ gentlemanList }) {
   return gentlemanList.map((item) => (
     <li className="gentleman" key={item.name}>
@@ -7,7 +9,9 @@ export function Gentlemen({ gentlemanList }) {
           src={"./img/" + item.picture}
           alt={item.alternativeText}
         />
-        <span className="gentleman__initial">{item.name[0]}</span>
+        <span className="gentleman__initial">
+          {item.name[0] === "T" ? item.name[4] : item.name[0]}
+        </span>
       </div>
       <div className="gentleman__data-container">
         <h2 className="gentleman__name">{item.name}</h2>
@@ -25,8 +29,7 @@ export function Gentlemen({ gentlemanList }) {
           </li>
         </ul>
       </div>
-      <i className="icon gentleman__icon fas fa-check"></i>
-      <i className="icon gentleman__icon gentleman__icon--delete fas fa-times"></i>
+      <Icons></Icons>
     </li>
   ));
 }

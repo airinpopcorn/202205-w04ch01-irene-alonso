@@ -11,8 +11,8 @@ function App() {
         <h1 className="main-title">The pointing gentlemen</h1>
       </header>
       <section className="controls">
-        <Info></Info>
-        <Button></Button>
+        <Info initial={0}></Info>
+        <Button initial={false}></Button>
       </section>
       <main className="main">
         <ul className="gentlemen">
